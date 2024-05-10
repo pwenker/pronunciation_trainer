@@ -5,14 +5,14 @@ The transcribe function takes a single parameter, audio, which is a numpy array 
 
 There are two transcriber choices available: grapheme and phoneme. The grapheme transcriber uses the openai/whisper-base.en model, while the phoneme transcriber uses the facebook/wav2vec2-lv-60-espeak-cv-ft model.
 """
-from enum import StrEnum
+from enum import Enum
 from functools import partial
 
 import numpy as np
 from transformers import pipeline
 
 
-class TranscriberChoice(StrEnum):
+class TranscriberChoice(str, Enum):
     grapheme = "openai/whisper-base.en"
     phoneme = "facebook/wav2vec2-lv-60-espeak-cv-ft"
 
