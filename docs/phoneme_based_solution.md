@@ -177,6 +177,7 @@ With more time, one could
 - Adapt OpenAI's Whisper model on phoneme recognition/transcription by simply changing the tokenizer to handle the new vocabulary (the set of phonemes), 
 and fine-tuning th model on an (audio, phoneme) dataset with an appropriate metric. See [openai/whisper · Phoneme recognition](https://huggingface.co/spaces/openai/whisper/discussions/86) for a short discussion about it.
 - Employ a model like [m-bain/whisperX: WhisperX](https://github.com/m-bain/whisperX) and possibly fine-tune it, to achieve word-level timestamps & diarization. 
+- Also, a probabilistic approach could be used to inform about transcription confidence and adjust/omit feedback according to it
 
 Further, the output of the ASR model could be enhanced by grouping phonemes (to allow for better world-level feedback and alignment) and also adding better prosodic/suprasegmental support.
 

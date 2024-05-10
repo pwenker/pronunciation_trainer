@@ -27,7 +27,6 @@ def transcribe(
     transcriber = pipeline("automatic-speech-recognition", model=transcriber_choice)
     try:
         sr, y = audio
-        print(f"Sampling rate is {sr}")
     except TypeError:
         return None
     y = y.astype(np.float32)
