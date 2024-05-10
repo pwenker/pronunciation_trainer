@@ -5,6 +5,7 @@ This script provides a simple web interface for the pronunciation trainer using 
 
 from pathlib import Path
 
+import os
 import gradio as gr
 from phonemizer import phonemize
 
@@ -88,6 +89,15 @@ with gr.Blocks() as demo:
         learner_l2 = gr.Textbox(
             label="Language the learner aims to acquire (L2)", placeholder="English"
         )
+        openai_api_key = gr.Textbox(
+                placeholder="Paste your OpenAI API key (sk-...)",
+                show_label=False,
+                value=os.getenv("OPENAI_API_KEY"),
+                label="openai_api_key",
+                lines=1,
+                type="password",
+            )
+        
         advanced_evaluate_btn = gr.Button("Evaluate", variant="primary")
         gr.Markdown("## Advanced Evaluation")
 
@@ -125,6 +135,7 @@ with gr.Blocks() as demo:
                 learner_l2,
                 learner_phoneme_transcription,
                 teacher_phoneme_transcription,
+                openai_api_key,
             ],
             outputs=llm_evaluation,
         )

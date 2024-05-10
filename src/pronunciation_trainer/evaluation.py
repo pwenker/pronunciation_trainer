@@ -73,9 +73,10 @@ def advanced_evaluation(
     learner_l2,
     learner_phoneme_transcription,
     teacher_phoneme_transcription,
+    openai_api_key,
 ) -> str:
     """Provide LLM-based feedback"""
-    return create_llm_chain().invoke(
+    return create_llm_chain(openai_api_key=openai_api_key).invoke(
         {
             "learner_l1": learner_l1,
             "learner_l2": learner_l2,
