@@ -80,13 +80,13 @@ Note: Visit [https://docs.python.org/3/library/difflib.html](https://docs.python
 ### Analysis of Transcription Pairs
 
 #### Pair 1: "Interesting."
-- **Teacher Transcription:** "Interesting."
+- **Teacher Transcription:** "interesting."
 - **Learner Transcription:** "Interesting."
 
 **Analysis:** 
 - The learner's transcription starts with a capital "I" and ends with a period. This could be remedied by using a simple normalization function. 
 - The capitalization and punctuation are transcription errors but do not necessarily indicate a pronunciation error. This highlights a limitation in assessing pronunciation purely from written transcriptions without audio context.
-- Further, without audio, it's impossible to assess aspects like stress, intonation, or subtle phonetic variations (e.g., the reduction of unstressed vowels or the precise articulation of consonants).
+- Further, without audio, it's impossible to assess prosodic aspects like stress, intonation, or subtle phonetic variations (e.g., the reduction of unstressed vowels or the precise articulation of consonants).
 
 #### Pair 2: "won" vs. "One."
 - **Teacher Transcription:** "won"
@@ -94,7 +94,7 @@ Note: Visit [https://docs.python.org/3/library/difflib.html](https://docs.python
 
 **Analysis:** 
 - This is an example where grapheme-based transcription fails to capture the intended meaning, as it cannot differentiate homophones based solely on sounds
-(The words "won" and "one" are homophones in English, pronounced the same way but differing in meaning and spelling)k:> [!WARNING]
+(The words "won" and "one" are homophones in English, pronounced the same way but differing in meaning and spelling)
 
 #### Pair 3: "Today is the thirteenth of May, twenty twenty-three." vs. "Today is the 13th of May, 2023."
 - **Teacher Transcription:** "Today is the thirteenth of May, twenty twenty-three."
@@ -122,4 +122,4 @@ A grapheme-based approach primarily focuses on the written symbols of a language
 
 ### Remedy through Phoneme-based Approach 
 
-To address the limitations, as well as in order to provide a more personalized and constructive feedback, we create a more advanced [phoneme-based solution](phoneme_based_solution.md]
+To address the limitations, as well as in order to provide a more personalized and constructive feedback, we create a more advanced [phoneme-based solution](phoneme_based_solution.md)
