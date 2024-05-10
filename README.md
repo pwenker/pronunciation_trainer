@@ -1,3 +1,13 @@
+---
+title: Pronunciation Trainer
+emoji: 🗣️
+colorFrom: blue
+colorTo: red
+sdk: gradio
+app_file: src/pronunciation_trainer/app.py
+pinned: True
+---
+
 # Pronunciation Trainer 🗣️
 
 This repository/app showcases how a [phoneme-based pronunciation trainer](docs/phoneme_based_solution.md) (including personalized LLM-based feedback) overcomes the limitations of a [grapheme-based approach](docs/grapheme_based_solution.md).
