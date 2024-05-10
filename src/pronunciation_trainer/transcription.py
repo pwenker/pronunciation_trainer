@@ -18,7 +18,7 @@ class TranscriberChoice(str, Enum):
 
 
 def transcribe(
-    audio, transcriber_choice: TranscriberChoice = TranscriberChoice.grapheme
+    audio, transcriber_choice: str,
 ):
     """
     The transcribe function takes a single parameter, audio, which is a numpy array of the audio the user recorded.
@@ -36,8 +36,8 @@ def transcribe(
 
 
 transcribe_to_phonemes = partial(
-    transcribe, transcriber_choice=TranscriberChoice.phoneme
+    transcribe, transcriber_choice="facebook/wav2vec2-lv-60-espeak-cv-ft"
 )
 transcribe_to_graphemes = partial(
-    transcribe, transcriber_choice=TranscriberChoice.grapheme
+    transcribe, transcriber_choice= "openai/whisper-base.en"
 )
