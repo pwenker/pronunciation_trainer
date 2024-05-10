@@ -5,7 +5,6 @@ colorFrom: blue
 colorTo: red
 sdk: gradio
 app_file: src/pronunciation_trainer/app.py
-pinned: True
 ---
 
 # Pronunciation Trainer 🗣️
