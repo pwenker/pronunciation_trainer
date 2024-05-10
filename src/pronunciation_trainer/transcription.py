@@ -24,7 +24,7 @@ def transcribe(
     The transcribe function takes a single parameter, audio, which is a numpy array of the audio the user recorded.
     The pipeline object expects this in float32 format,so we convert it first to float32, and then extract the transcribed text.
     """
-    transcriber = pipeline("automatic-speech-recognition", model=transcriber_choice)
+    transcriber = pipeline("automatic-speech-recognition", model=transcriber_choice.value)
     try:
         sr, y = audio
     except TypeError:
