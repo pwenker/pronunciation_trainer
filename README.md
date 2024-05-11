@@ -1,6 +1,9 @@
 # Pronunciation Trainer 🗣️
 
-This repository/app showcases how a [phoneme-based pronunciation trainer](docs/phoneme_based_solution.md) (including personalized LLM-based feedback) overcomes the limitations of a [grapheme-based approach](docs/grapheme_based_solution.md).
+This repository/app showcases how a [phoneme-based pronunciation trainer](https://github.com/pwenker/pronunciation_trainer/blob/main/docs/phoneme_based_solution.md)
+(including personalized LLM-based feedback) overcomes the limitations of a [grapheme-based approach](https://github.com/pwenker/pronunciation_trainer/blob/main/docs/grapheme_based_solution.md)
+
+For convenience, you find a feature comparison overview of the two solutions below:
 
 | Feature                           | Grapheme-Based Solution                                  | Phoneme-Based Solution                                  |
 |-----------------------------------|----------------------------------------------------------|---------------------------------------------------------|
@@ -23,8 +26,14 @@ This repository/app showcases how a [phoneme-based pronunciation trainer](docs/p
 [**Pronunciation Trainer App**](https://pwenker-pronunciation-trainer.hf.space/)
 
 ### 🔍 Inspect the code at:
-- **GitHub:** [pwenker/pronunciation_trainer](https://github.com/pwenker/pronounciation_trainer)
-- **Hugging Face Spaces:** [pwenker/pronunciation_trainer](https://huggingface.co/spaces/pwenker/pronounciation_trainer)
+- **GitHub:** [pwenker/pronunciation_trainer](https://github.com/pwenker/pronunciation_trainer)
+- **Hugging Face Spaces:** [pwenker/pronunciation_trainer](https://huggingface.co/spaces/pwenker/pronunciation_trainer)
+
+### 📚 Read about the pronunciation trainer:
+
+1. [Grapheme-based Approach](https://github.com/pwenker/pronunciation_trainer/blob/main/docs/grapheme_based_solution.md)
+2. [Phoneme-based Approach](https://github.com/pwenker/pronunciation_trainer/blob/main/docs/phoneme_based_solution.md)
+
 
 ## Local Deployment 🏠
 
