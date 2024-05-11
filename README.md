@@ -45,9 +45,9 @@ For convenience, you find a feature comparison overview of the two solutions bel
 
 - Create a `.env` file in the `pronunciation_trainer` folder and add the following variable:
 
-#### OPENAI API Token 🔑
+#### OPENAI API Key 🔑
 ```
-OPENAI_TOKEN=... # Token for the OpenAI API
+OPENAI_API_KEY=... # Token for the OpenAI API
 ```
 
 ### Set-Up 🛠️
