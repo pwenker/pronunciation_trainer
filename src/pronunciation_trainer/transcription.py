@@ -5,26 +5,21 @@ The transcribe function takes a single parameter, audio, which is a numpy array 
 
 There are two transcriber choices available: grapheme and phoneme. The grapheme transcriber uses the openai/whisper-base.en model, while the phoneme transcriber uses the facebook/wav2vec2-lv-60-espeak-cv-ft model.
 """
-from enum import Enum
 from functools import partial
 
 import numpy as np
 from transformers import pipeline
 
 
-class TranscriberChoice(str, Enum):
-    grapheme = "openai/whisper-base.en"
-    phoneme = "facebook/wav2vec2-lv-60-espeak-cv-ft"
-
-
 def transcribe(
-    audio, transcriber_choice: str,
+    audio,
+    transcriber_choice: str,
 ):
     """
     The transcribe function takes a single parameter, audio, which is a numpy array of the audio the user recorded.
     The pipeline object expects this in float32 format,so we convert it first to float32, and then extract the transcribed text.
     """
-    transcriber = pipeline("automatic-speech-recognition", model=transcriber_choice.value)
+    transcriber = pipeline("automatic-speech-recognition", model=transcriber_choice)
     try:
         sr, y = audio
     except TypeError:
@@ -39,5 +34,5 @@ transcribe_to_phonemes = partial(
     transcribe, transcriber_choice="facebook/wav2vec2-lv-60-espeak-cv-ft"
 )
 transcribe_to_graphemes = partial(
-    transcribe, transcriber_choice= "openai/whisper-base.en"
+    transcribe, transcriber_choice="openai/whisper-base.en"
 )

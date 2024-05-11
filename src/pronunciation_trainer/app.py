@@ -19,9 +19,8 @@ from pronunciation_trainer.transcription import (transcribe_to_graphemes,
 
 with gr.Blocks() as demo:
     with gr.Tab("Welcome"):
-        readme = Path("README.md").read_text()
-        gr_readme = readme.split('---')[2].strip()
-        gr.Markdown(gr_readme)
+        readme = Path("no_header_readme.md").read_text()
+        gr.Markdown(readme)
 
     with gr.Tab("Grapheme-Based Speech Evaluation"):
         with gr.Row():
