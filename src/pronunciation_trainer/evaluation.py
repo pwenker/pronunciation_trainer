@@ -19,6 +19,8 @@ The advanced evaluation function includes:
 from difflib import Differ, SequenceMatcher
 from typing import Optional, Tuple
 
+import gradio as gr
+
 from pronunciation_trainer.llm import create_llm_chain
 
 
@@ -61,6 +63,18 @@ def basic_evaluation(
     expected: str, actual: str, autojunk: bool = True
 ) -> Tuple[float, str, list[Tuple[str, Optional[str]]]]:
     """Evaluate speaking attempts by comparing expected and actual phrases."""
+
+    if expected == "" or actual == "":  # If either input is empty, return 0
+        gr.Warning(
+            "To compute a similarity score, you need to supply both teacher and learner (phoneme) transcripts!"
+        )
+        return (
+            0.0,
+            """**Info:** To compute a similarity score, you need to supply both teacher and learner (phoneme) transcripts. 📝
+Simply select one of the examples on the bottom of the page or type in your own text in the textboxes above. 🖊️""",
+            [],
+        )
+
     expected, actual = normalize_texts(expected, actual)
     similarity_ratio = compare_phrases(expected, actual)
     diff = diff_phrases(expected, actual)
@@ -76,11 +90,22 @@ def advanced_evaluation(
     openai_api_key,
 ) -> str:
     """Provide LLM-based feedback"""
-    return create_llm_chain(openai_api_key=openai_api_key).invoke(
-        {
-            "learner_l1": learner_l1,
-            "learner_l2": learner_l2,
-            "learner_phoneme_transcription": learner_phoneme_transcription,
-            "teacher_phoneme_transcription": teacher_phoneme_transcription,
-        }
-    )
+    if "" in [
+        learner_l1,
+        learner_l2,
+        learner_phoneme_transcription,
+        teacher_phoneme_transcription,
+    ]:
+        gr.Warning(
+            "To compute LLM feedback, you need to supply all four inputs: learner L1, learner L2, learner phoneme transcription, and teacher phoneme transcription!"
+        )
+        return ""
+    else:
+        return create_llm_chain(openai_api_key=openai_api_key).invoke(
+            {
+                "learner_l1": learner_l1,
+                "learner_l2": learner_l2,
+                "learner_phoneme_transcription": learner_phoneme_transcription,
+                "teacher_phoneme_transcription": teacher_phoneme_transcription,
+            }
+        )

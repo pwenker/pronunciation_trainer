@@ -5,143 +5,406 @@
 #   pre: false
 #   features: []
 #   all-features: false
+#   with-sources: false
 
 -e file:.
 aiofiles==23.2.1
+    # via gradio
 aiohttp==3.9.5
+    # via langchain
+    # via langchain-community
 aiosignal==1.3.1
+    # via aiohttp
 altair==5.3.0
+    # via gradio
 annotated-types==0.6.0
+    # via pydantic
 anyio==4.3.0
+    # via httpx
+    # via openai
+    # via starlette
+    # via watchfiles
+async-timeout==4.0.3
+    # via aiohttp
+    # via langchain
 attrs==23.2.0
+    # via aiohttp
+    # via clldutils
+    # via csvw
+    # via jsonschema
+    # via phonemizer
+    # via referencing
 babel==2.15.0
+    # via csvw
 bibtexparser==2.0.0b7
+    # via clldutils
 certifi==2024.2.2
+    # via httpcore
+    # via httpx
+    # via requests
 charset-normalizer==3.3.2
+    # via requests
 click==8.1.7
+    # via typer
+    # via uvicorn
 clldutils==3.22.2
+    # via segments
 colorama==0.4.6
+    # via csvw
 colorlog==6.8.2
+    # via clldutils
 contourpy==1.2.1
+    # via matplotlib
 csvw==3.3.0
+    # via segments
 cycler==0.12.1
+    # via matplotlib
 dataclasses-json==0.6.5
+    # via langchain
+    # via langchain-community
 distro==1.9.0
+    # via openai
 dlinfo==1.2.1
+    # via phonemizer
 dnspython==2.6.1
+    # via email-validator
 email-validator==2.1.1
+    # via fastapi
+exceptiongroup==1.2.1
+    # via anyio
 fastapi==0.111.0
+    # via fastapi-cli
+    # via gradio
 fastapi-cli==0.0.3
+    # via fastapi
 ffmpy==0.3.2
+    # via gradio
 filelock==3.14.0
+    # via huggingface-hub
+    # via torch
+    # via transformers
+    # via triton
 fonttools==4.51.0
+    # via matplotlib
 frozenlist==1.4.1
+    # via aiohttp
+    # via aiosignal
 fsspec==2024.3.1
+    # via gradio-client
+    # via huggingface-hub
+    # via torch
 gradio==4.29.0
+    # via pronunciation-trainer
 gradio-client==0.16.1
+    # via gradio
 greenlet==3.0.3
+    # via sqlalchemy
 h11==0.14.0
+    # via httpcore
+    # via uvicorn
 httpcore==1.0.5
+    # via httpx
 httptools==0.6.1
+    # via uvicorn
 httpx==0.27.0
+    # via fastapi
+    # via gradio
+    # via gradio-client
+    # via openai
 huggingface-hub==0.23.0
+    # via gradio
+    # via gradio-client
+    # via tokenizers
+    # via transformers
 idna==3.7
+    # via anyio
+    # via email-validator
+    # via httpx
+    # via requests
+    # via yarl
 importlib-resources==6.4.0
+    # via gradio
 isodate==0.6.1
+    # via csvw
+    # via rdflib
 jinja2==3.1.4
+    # via altair
+    # via fastapi
+    # via gradio
+    # via torch
 joblib==1.4.2
+    # via phonemizer
 jsonpatch==1.33
+    # via langchain-core
 jsonpointer==2.4
+    # via jsonpatch
 jsonschema==4.22.0
+    # via altair
+    # via csvw
 jsonschema-specifications==2023.12.1
+    # via jsonschema
 kiwisolver==1.4.5
+    # via matplotlib
 langchain==0.1.19
+    # via pronunciation-trainer
 langchain-community==0.0.38
+    # via langchain
 langchain-core==0.1.52
+    # via langchain
+    # via langchain-community
+    # via langchain-openai
+    # via langchain-text-splitters
 langchain-openai==0.1.6
+    # via pronunciation-trainer
 langchain-text-splitters==0.0.1
+    # via langchain
 langsmith==0.1.56
+    # via langchain
+    # via langchain-community
+    # via langchain-core
 language-tags==1.2.0
+    # via csvw
 lxml==5.2.1
+    # via clldutils
 markdown==3.6
+    # via clldutils
 markdown-it-py==3.0.0
+    # via rich
 markupsafe==2.1.5
+    # via clldutils
+    # via gradio
+    # via jinja2
 marshmallow==3.21.2
+    # via dataclasses-json
 matplotlib==3.8.4
+    # via gradio
 mdurl==0.1.2
+    # via markdown-it-py
 mpmath==1.3.0
+    # via sympy
 multidict==6.0.5
+    # via aiohttp
+    # via yarl
 mypy-extensions==1.0.0
+    # via typing-inspect
 networkx==3.3
+    # via torch
 numpy==1.26.4
+    # via altair
+    # via contourpy
+    # via gradio
+    # via langchain
+    # via langchain-community
+    # via matplotlib
+    # via pandas
+    # via transformers
 nvidia-cublas-cu12==12.1.3.1
+    # via nvidia-cudnn-cu12
+    # via nvidia-cusolver-cu12
+    # via torch
 nvidia-cuda-cupti-cu12==12.1.105
+    # via torch
 nvidia-cuda-nvrtc-cu12==12.1.105
+    # via torch
 nvidia-cuda-runtime-cu12==12.1.105
+    # via torch
 nvidia-cudnn-cu12==8.9.2.26
+    # via torch
 nvidia-cufft-cu12==11.0.2.54
+    # via torch
 nvidia-curand-cu12==10.3.2.106
+    # via torch
 nvidia-cusolver-cu12==11.4.5.107
+    # via torch
 nvidia-cusparse-cu12==12.1.0.106
+    # via nvidia-cusolver-cu12
+    # via torch
 nvidia-nccl-cu12==2.20.5
+    # via torch
 nvidia-nvjitlink-cu12==12.4.127
+    # via nvidia-cusolver-cu12
+    # via nvidia-cusparse-cu12
 nvidia-nvtx-cu12==12.1.105
+    # via torch
 openai==1.28.0
+    # via langchain-openai
 orjson==3.10.3
+    # via fastapi
+    # via gradio
+    # via langsmith
 packaging==23.2
+    # via altair
+    # via gradio
+    # via gradio-client
+    # via huggingface-hub
+    # via langchain-core
+    # via marshmallow
+    # via matplotlib
+    # via transformers
 pandas==2.2.2
+    # via altair
+    # via gradio
 phonemizer==3.2.1
+    # via pronunciation-trainer
 pillow==10.3.0
+    # via gradio
+    # via matplotlib
 pydantic==2.7.1
+    # via fastapi
+    # via gradio
+    # via langchain
+    # via langchain-core
+    # via langsmith
+    # via openai
 pydantic-core==2.18.2
+    # via pydantic
 pydub==0.25.1
+    # via gradio
 pygments==2.18.0
+    # via rich
 pylatexenc==2.10
+    # via bibtexparser
+    # via clldutils
 pyparsing==3.1.2
+    # via matplotlib
+    # via rdflib
 python-dateutil==2.9.0.post0
+    # via clldutils
+    # via csvw
+    # via matplotlib
+    # via pandas
 python-dotenv==1.0.1
+    # via uvicorn
 python-multipart==0.0.9
+    # via fastapi
+    # via gradio
 pytz==2024.1
+    # via pandas
 pyyaml==6.0.1
+    # via gradio
+    # via huggingface-hub
+    # via langchain
+    # via langchain-community
+    # via langchain-core
+    # via transformers
+    # via uvicorn
 rdflib==7.0.0
+    # via csvw
 referencing==0.35.1
+    # via jsonschema
+    # via jsonschema-specifications
 regex==2024.5.10
+    # via segments
+    # via tiktoken
+    # via transformers
 requests==2.31.0
+    # via csvw
+    # via huggingface-hub
+    # via langchain
+    # via langchain-community
+    # via langsmith
+    # via tiktoken
+    # via transformers
 rfc3986==1.5.0
+    # via csvw
 rich==13.7.1
+    # via typer
 rpds-py==0.18.1
+    # via jsonschema
+    # via referencing
 ruff==0.4.4
+    # via gradio
 safetensors==0.4.3
+    # via transformers
 segments==2.2.1
+    # via phonemizer
 semantic-version==2.10.0
+    # via gradio
 shellingham==1.5.4
+    # via typer
 six==1.16.0
+    # via isodate
+    # via python-dateutil
 sniffio==1.3.1
+    # via anyio
+    # via httpx
+    # via openai
 sqlalchemy==2.0.30
+    # via langchain
+    # via langchain-community
 starlette==0.37.2
+    # via fastapi
 sympy==1.12
+    # via torch
 tabulate==0.9.0
+    # via clldutils
 tenacity==8.3.0
+    # via langchain
+    # via langchain-community
+    # via langchain-core
 tiktoken==0.6.0
+    # via langchain-openai
 tokenizers==0.19.1
+    # via transformers
 tomlkit==0.12.0
+    # via gradio
 toolz==0.12.1
+    # via altair
 torch==2.3.0
+    # via pronunciation-trainer
+    # via torchaudio
 torchaudio==2.3.0
+    # via pronunciation-trainer
 tqdm==4.66.4
+    # via huggingface-hub
+    # via openai
+    # via transformers
 transformers==4.40.2
+    # via pronunciation-trainer
 triton==2.3.0
+    # via torch
 typer==0.12.3
+    # via fastapi-cli
+    # via gradio
 typing-extensions==4.11.0
+    # via altair
+    # via anyio
+    # via fastapi
+    # via gradio
+    # via gradio-client
+    # via huggingface-hub
+    # via openai
+    # via phonemizer
+    # via pydantic
+    # via pydantic-core
+    # via sqlalchemy
+    # via torch
+    # via typer
+    # via typing-inspect
+    # via uvicorn
 typing-inspect==0.9.0
+    # via dataclasses-json
 tzdata==2024.1
+    # via pandas
 ujson==5.9.0
+    # via fastapi
 uritemplate==4.1.1
+    # via csvw
 urllib3==2.2.1
+    # via gradio
+    # via requests
 uvicorn==0.29.0
+    # via fastapi
+    # via fastapi-cli
+    # via gradio
 uvloop==0.19.0
+    # via uvicorn
 watchfiles==0.21.0
+    # via uvicorn
 websockets==11.0.3
+    # via gradio-client
+    # via uvicorn
 yarl==1.9.4
-# The following packages are considered to be unsafe in a requirements file:
+    # via aiohttp
 setuptools==69.5.1
+    # via pronunciation-trainer
