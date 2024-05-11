@@ -9,7 +9,8 @@ app_file: src/pronunciation_trainer/app.py
 
 # Pronunciation Trainer 🗣️
 
-This repository/app showcases how a [phoneme-based pronunciation trainer](docs/phoneme_based_solution.md) (including personalized LLM-based feedback) overcomes the limitations of a [grapheme-based approach](docs/grapheme_based_solution.md).
+This repository/app showcases how a [phoneme-based pronunciation trainer](https://github.com/pwenker/pronunciation_trainer/blob/main/docs/phoneme_based_solution.md
+(including personalized LLM-based feedback) overcomes the limitations of a [grapheme-based approach](https://github.com/pwenker/pronunciation_trainer/blob/main/docs/grapheme_based_solution.md)
 
 | Feature                           | Grapheme-Based Solution                                  | Phoneme-Based Solution                                  |
 |-----------------------------------|----------------------------------------------------------|---------------------------------------------------------|
@@ -29,7 +30,7 @@ This repository/app showcases how a [phoneme-based pronunciation trainer](docs/p
 ## Quickstart 🚀
 
 ### 👉 Click here to try out the app directly:
-[**Pronunciation Trainer App**](https://pwenker-pronunciation-trainer.hf.space/)
+[**Pronunciation Trainer App**](https://pwenker-pronunciation_trainer.hf.space/)
 
 ### 🔍 Inspect the code at:
 - **GitHub:** [pwenker/pronunciation_trainer](https://github.com/pwenker/pronounciation_trainer)
