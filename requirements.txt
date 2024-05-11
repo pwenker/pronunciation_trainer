@@ -1,1 +1,1 @@
-pronunciation_trainer @ git+https://github.com/pwenker/pronunciation_trainer
+pronunciation_trainer @ git+https://github.com/pwenker/pronunciation_trainer@hf_space
